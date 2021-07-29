@@ -1,0 +1,2 @@
+# ApplicationPlatformAux
+ApplicationPlatform model auxiliary
