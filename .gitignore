@@ -1,0 +1,9 @@
+/BuildModelResult.log
+/BuildModelResult.xml
+/BuildProjectResult.log
+/BuildProjectResult.xml
+/bin
+/XppMetadata
+/BPCheck.xml
+*.xref
+/BuildProjectResult.err.xml

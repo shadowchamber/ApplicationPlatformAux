@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>GlobalAux_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+/// <summary>
+/// Extension class for class Global.
+/// </summary>
+[ExtensionOf(classStr(Global))]
+final static class GlobalAux_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>dateTimeParseExact</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Date time parse exact.
+    /// Source: https://community.dynamics.com/ax/b/amirsaxspace/posts/date-time-custom-formats
+    /// Author: Amir Nazim
+    /// </summary>
+    /// <param name = "_string"></param>
+    /// <param name = "_format"></param>
+    /// <returns></returns>
+    public static utcdatetime dateTimeParseExact(str _string, str _format)
+    {
+        System.Globalization.CultureInfo culture = System.Globalization.CultureInfo::get_InvariantCulture();
+
+        utcDateTime dt = System.DateTime::ParseExact(
+                            _string,
+                            _format,
+                            culture);
+
+        return dt;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
